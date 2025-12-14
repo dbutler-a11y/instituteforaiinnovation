@@ -16,7 +16,7 @@ export default function BrochurePage() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link
-              href="/documents"
+              href="/"
               className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium"
             >
               <ArrowLeft className="h-4 w-4" />

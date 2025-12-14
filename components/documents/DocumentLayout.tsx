@@ -28,7 +28,7 @@ export function DocumentLayout({ title, section, children, subtitle }: DocumentL
               <span className="hidden sm:inline">Home</span>
             </Link>
             <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 text-slate-400" />
-            <Link href="/documents" className="hover:text-slate-900 transition-colors">
+            <Link href="/" className="hover:text-slate-900 transition-colors">
               Documents
             </Link>
             <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 text-slate-400" />
@@ -36,7 +36,7 @@ export function DocumentLayout({ title, section, children, subtitle }: DocumentL
           </nav>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <Link
-              href="/documents"
+              href="/"
               className="flex items-center gap-2 text-slate-500 hover:text-slate-800 transition-colors text-sm font-medium group"
             >
               <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
