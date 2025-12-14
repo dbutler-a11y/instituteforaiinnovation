@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FileText, Building, Users, DollarSign, BookOpen, Scale, Shield, Heart, Briefcase, ClipboardList, Send, MessageSquare, BookMarked, Download, GraduationCap, Calendar, FileSignature, Award, Zap, Wrench, Monitor, ListChecks } from "lucide-react";
+import { FileText, Building, DollarSign, BookOpen, Scale, Shield, Heart, Briefcase, ClipboardList, Send, MessageSquare, BookMarked, Download, GraduationCap, Calendar, FileSignature, Award, Zap, Wrench, Monitor } from "lucide-react";
 
 const studentDocuments = [
   {
@@ -151,13 +151,7 @@ export default function Home() {
                 AI Capability Specialist Certificate - Complete Submission Package
               </p>
             </div>
-            <Link
-              href="/tracker"
-              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
-            >
-              <ListChecks className="h-4 w-4" />
-              Progress Tracker
-            </Link>
+{/* Tracker requires local database - hidden on Vercel */}
           </div>
         </div>
       </header>
