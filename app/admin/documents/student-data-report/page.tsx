@@ -8,11 +8,11 @@ export default function StudentDataReportPage() {
       subtitle="TWC/ETPL Performance Accountability & Outcomes Documentation"
     >
       {/* Executive Summary Card */}
-      <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 mb-10 not-prose text-white shadow-lg">
+      <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 mb-10 not-prose shadow-lg">
         <div className="flex items-start justify-between">
           <div>
-            <span className="text-slate-400 text-sm uppercase tracking-wide">Performance Year 2025</span>
-            <h2 className="text-2xl font-bold mt-1 mb-4">Student Data Report (SDR)</h2>
+            <span className="text-slate-400 text-sm uppercase tracking-wide font-medium">Performance Year 2025</span>
+            <h2 className="text-2xl font-bold mt-1 mb-4 text-white">Student Data Report (SDR)</h2>
             <p className="text-slate-300 leading-relaxed max-w-2xl">
               This comprehensive report documents student outcomes, performance metrics, and
               accountability data in accordance with Texas Workforce Commission (TWC) ETPL
@@ -21,7 +21,7 @@ export default function StudentDataReportPage() {
           </div>
           <div className="text-right hidden lg:block">
             <div className="text-4xl font-bold text-emerald-400">NEW</div>
-            <div className="text-slate-400 text-sm">Program Status</div>
+            <div className="text-slate-400 text-sm font-medium">Program Status</div>
           </div>
         </div>
       </div>
@@ -652,8 +652,8 @@ export default function StudentDataReportPage() {
       </div>
 
       {/* Compliance Statement */}
-      <div className="bg-slate-900 rounded-2xl p-8 mt-10 not-prose text-white">
-        <h3 className="text-xl font-bold mb-3">Data Privacy & Compliance Statement</h3>
+      <div className="bg-slate-900 rounded-2xl p-8 mt-10 not-prose">
+        <h3 className="text-xl font-bold mb-3 text-white">Data Privacy & Compliance Statement</h3>
         <p className="text-slate-300 leading-relaxed mb-4">
           The Institute for AI Innovation maintains strict data security protocols for all
           student records. Social Security Numbers and personally identifiable information
