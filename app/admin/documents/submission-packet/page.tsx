@@ -93,9 +93,9 @@ export default function SubmissionPacketPage() {
           </div>
 
           {/* ==================== TABLE OF CONTENTS ==================== */}
-          <div className="px-8 py-8 border-b print:break-after-page">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Table of Contents</h2>
-            <div className="grid md:grid-cols-2 gap-2">
+          <div className="px-8 py-8 border-b print:py-6 print:break-after-page print:break-inside-avoid">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 print:mb-4 print:text-xl">Table of Contents</h2>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-1 print:gap-y-0">
               {[
                 { num: "1", title: "Program Overview" },
                 { num: "2", title: "TWC Licensing Exemption" },
@@ -114,9 +114,9 @@ export default function SubmissionPacketPage() {
                 { num: "15", title: "Provider Submission Packet" },
                 { num: "16", title: "Workforce Board Appeal Language" },
               ].map((doc) => (
-                <div key={doc.num} className="flex items-center gap-3 py-2 border-b border-dashed border-gray-200">
-                  <span className="w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">{doc.num}</span>
-                  <span className="text-gray-700">{doc.title}</span>
+                <div key={doc.num} className="flex items-center gap-3 py-2 print:py-1.5 border-b border-dashed border-gray-200">
+                  <span className="w-7 h-7 print:w-6 print:h-6 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm print:text-xs font-bold flex-shrink-0">{doc.num}</span>
+                  <span className="text-gray-700 print:text-sm">{doc.title}</span>
                 </div>
               ))}
             </div>
@@ -759,6 +759,29 @@ export default function SubmissionPacketPage() {
 
           header {
             display: none !important;
+          }
+
+          /* Prevent sections from breaking in the middle */
+          .print\\:break-inside-avoid {
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+
+          /* Tables should not split across pages */
+          table {
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+
+          /* Keep grid items together */
+          .grid > div {
+            break-inside: avoid !important;
+          }
+
+          /* Reduce spacing for print */
+          .print\\:py-6 {
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
           }
         }
       `}</style>
