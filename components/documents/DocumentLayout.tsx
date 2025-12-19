@@ -28,7 +28,7 @@ export function DocumentLayout({ title, section, children, subtitle }: DocumentL
               <span className="hidden sm:inline">Home</span>
             </Link>
             <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 text-slate-400" />
-            <Link href="/" className="hover:text-slate-900 transition-colors">
+            <Link href="/admin/documents" className="hover:text-slate-900 transition-colors">
               Documents
             </Link>
             <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 text-slate-400" />
@@ -36,7 +36,7 @@ export function DocumentLayout({ title, section, children, subtitle }: DocumentL
           </nav>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <Link
-              href="/"
+              href="/admin/documents"
               className="flex items-center gap-2 text-slate-500 hover:text-slate-800 transition-colors text-sm font-medium group"
             >
               <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
@@ -60,7 +60,7 @@ export function DocumentLayout({ title, section, children, subtitle }: DocumentL
       <main className="max-w-4xl mx-auto px-4 sm:px-8 py-8 sm:py-12 print:py-0 print:px-0">
         <article className="bg-white rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/50 overflow-hidden print:shadow-none print:border-none print:rounded-none">
           {/* Document Header */}
-          <div className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 px-12 py-12 print:bg-slate-800 overflow-hidden">
+          <div className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 px-4 sm:px-8 md:px-12 py-8 sm:py-10 md:py-12 print:bg-slate-800 overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
@@ -71,17 +71,17 @@ export function DocumentLayout({ title, section, children, subtitle }: DocumentL
                   {section}
                 </span>
               </div>
-              <h1 className="text-4xl font-bold text-white leading-tight tracking-tight print:text-2xl">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight print:text-2xl">
                 {title}
               </h1>
               {subtitle && (
-                <p className="text-slate-400 mt-4 text-lg font-light">{subtitle}</p>
+                <p className="text-slate-400 mt-3 sm:mt-4 text-base sm:text-lg font-light">{subtitle}</p>
               )}
             </div>
           </div>
 
           {/* Document Body */}
-          <div className="px-12 py-12 print:px-8 print:py-6">
+          <div className="px-4 sm:px-8 md:px-12 py-6 sm:py-8 md:py-12 print:px-8 print:py-6">
             <div className="document-content">
               {children}
             </div>
